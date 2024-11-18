@@ -2,9 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import DataGridDemo from './components/DataGrid'
 import Tabs from './components/Tabs'
-import GetData from './components/services/apis'
+import { GetFloodData } from './components/APIDataButton/index.tsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,8 +35,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <Tabs/>
-      <GetData/>
-      <DataGridDemo/>
+      <GetFloodData/>
     </>
   )
 }

@@ -1,30 +1,28 @@
 import { useState, useEffect } from "react";
 
+const BASE_URL:string = 'http://environment.data.gov.uk/flood-monitoring/id/floods'
+
+
 export default function GetData() {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch('http://environment.data.gov.uk/flood-monitoring/id/floods')
-        .then((response) => response.json())
-        .then((data) => {
-            setData(data);
-            console.log(data);
-        })
+        const fetchData = async () => {
+                const response = await fetch(`${BASE_URL}`);
+                const result = await response.json() ;
+                setData(result.items[0].description);
+                console.log(result, "This is result")
+        }
+        fetchData();
     }, []);
-
-    
 
     return (
         <>
             <div>
-                <select>
-                    <option>
-                       
-                    </option>
-                </select>
+                <p>
+                    {data}
+                </p>
             </div>
-            
         </>
     )
 }
-    
