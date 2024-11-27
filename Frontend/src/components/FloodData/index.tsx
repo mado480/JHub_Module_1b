@@ -20,13 +20,23 @@ export default function GetFloodData() {
 
     return (
             <>
-            <div>
-                {displayData.map((object) => (
-                    <p>{object.description}</p>
-                )    
+            <tr>
+                <td>Area Name</td>
+                <td>Description</td>
+                <td>Severity Level</td>
+            </tr>
+                {displayData.map((object, index) => {
+                    return (
+                        <>
+                            <tr key={index}>
+                                <td>{object.eaAreaName}</td>
+                                <td>{object.description}</td>
+                                <td>{object.severityLevel}</td>
+                            </tr>
+                        </>
+                    )
+                }    
                 )}
-                
-            </div>
             </>
         )
 
