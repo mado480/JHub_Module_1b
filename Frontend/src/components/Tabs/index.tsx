@@ -26,7 +26,7 @@ const content = [
             </div>
             <div id="tab-content">
                     {content[activeContentIndex].map((item) => (
-                    <p key={item}>{item}</p>
+                    <p key={item} id="infoBox">{item}</p>
                     ))}
             </div>
             

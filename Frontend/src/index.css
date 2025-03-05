@@ -54,6 +54,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+#tableFloodData {
+  background-color: #646cff;
+  position: relative;
+}
+
+#tableFloodEntry {
+  background-color: beige;
+}
+
+#tab-content {
+  height: 150px;
+  width: 800px;
+}
+
+#infoBox{
+  align-self: center;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
